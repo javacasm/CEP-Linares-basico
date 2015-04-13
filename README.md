@@ -11,6 +11,8 @@
 
 [Introducción a Arduino](./Introduccion Arduino.pdf)
 
+[Programando Arduino con Bitbloq](.resumen/curso arduino basico.md)
+
 [Introducción a la electrónica](./Introducción a la electrónica.pdf)
 
 [Materiales complementarios](./complementarios)
