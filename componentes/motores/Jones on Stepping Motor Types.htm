@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0051)http://homepage.cs.uiowa.edu/~jones/step/types.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jones on Stepping Motor Types</title>
+  
+  <meta name="Author" content="Douglas W. Jones">
+  <meta name="Language" content="English">
+  <meta name="editor" content="/usr/bin/vi">
+  
+  
+  
+  <style type="text/css">
+   BODY { margin-left: 3%; margin-right: 3%; }
+   H2.SQUAT { margin-top: 0.4em; margin-bottom: 0.25em; }
+   H3.SQUAT { margin-top: 0.3em; margin-bottom: 0.2em; }
+   H4.SQUAT { margin-top: 0.2em; margin-bottom: 0.15em; }
+   P.SQUAT { margin-top: 0.25em; margin-bottom: 0.15em; }
+   UL.SQUAT { margin-top: 0.25em; margin-bottom: 0.15em; }
+   EM.O { font-style: normal; text-decoration: overline; }
+   EM.U { font-style: normal; text-decoration: underline; }
+   EM.S { font-style: normal; text-decoration: line-through; }
+   A { text-decoration: none; }
+   A.I { font-style: italic; text-decoration: none; }
+   TABLE.BOXY { border: 0; padding: 0; border-spacing: 0;
+                border-collapse: collapse; }
+   TD.BOX { border: solid; border-width: thin; border-color: DimGray;
+	      text-align: center; }
+   TD.BOXTT { border: solid; border-width: thin; border-color: DimGray;
+	      font-family: monospace; text-align: center; }
+   TD.TT { font-family: monospace; text-align: left; }
+   TD.TTSPACE { font-family: monospace; text-align: left; color: white }
+   TD.SHADE { background: Silver; text-align: center; }
+   CAPTION { padding-top: 6px; }
+   DIV.HEADBOX { border: groove; border-width: 2px; background: #F0F0E0; padding-top: 1%; padding-bottom: 1%; padding-left: 5px; }
+   DIV.HEADBOX P { margin-top: 0.8em; margin-bottom: 0.8em; }
+   DIV.HEADBOX H1 { margin-top: 0.2em; margin-bottom: 0.4em; }
+   DIV.HEADBOX H2 { margin-top: 0.2em; margin-bottom: 0.4em; }
+   DIV.INDENT { border: none; padding-left: 1em }
+   DIV.INVISIBLE { font-size: 3px; letter-spacing: -5px; color: white; background: white; }
+   DIV.INVISIBLE A:link { color: white; }
+   DIV.INVISIBLE A:visited { color: white; }
+   DIV.INVISIBLE A:active { color: white; }
+   DIV.invisible A:active { color: white; background: white; }
+  </style>
+ </head>
+ <body bgcolor="#FFFFFF" text="#000000" link="#0000CC" vlink="#880088" alink="#880088">
+  <div class="HEADBOX">
+   
+   <table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td>&nbsp;&nbsp;</td><td>
+    
+     <h1>1. Stepping Motor Types</h1>
+    
+    
+    <p>
+    
+     Part of <a href="http://homepage.cs.uiowa.edu/~jones/step/index.html">
+      
+      Stepping Motors
+      
+     </a>
+     <br>
+     
+    
+    
+     by
+     <a href="http://www.cs.uiowa.edu/~jones/">Douglas W. Jones</a>
+     
+     <br>
+    
+    
+    <a href="http://www.uiowa.edu/">
+     T<small>HE</small> U<small>NIVERSITY</small>
+    <small>OF</small> I<small>OWA</small></a>
+    <a href="http://www.cs.uiowa.edu/">Department of Computer Science</a>
+    
+    
+    
+   </p></td></tr></tbody></table>
+    
+  </div>
+ 
+
+
+
+<ul>
+<li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#intro"> Introduction </a>
+</li><li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#vrmotors"> Variable Reluctance Motors </a>
+</li><li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#unipolar"> Unipolar Motors </a>
+</li><li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#bipolar"> Bipolar Motors </a>
+</li><li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#bifilar"> Bifilar Motors </a>
+</li><li><a href="http://homepage.cs.uiowa.edu/~jones/step/types.html#multiphase"> Multiphase Motors </a>
+</li></ul>
+
+<hr>
+
+<p>
+</p><h2><a name="intro">Introduction</a></h2>
+<p>
+Stepping motors come in two varieties, <i>permanent magnet</i> and
+<i>variable reluctance</i> (there are also <i>hybrid</i> motors, which are
+indistinguishable from permanent magnet motors from the controller's point
+of view).  Lacking a label on the motor, you can generally tell the two
+apart by feel when no power is applied.  Permanent magnet motors tend to
+"cog" as you twist the rotor with your fingers, while variable reluctance
+motors almost spin freely (although they may cog slightly because of
+residual magnetization in the rotor).  You can also distinguish between
+the two varieties with an ohmmeter.  Variable reluctance motors usually
+have three (sometimes four) windings, with a common return, while permanent
+magnet motors usually have two independent windings, with or without
+center taps.  Center-tapped windings are used in unipolar permanent magnet
+motors.
+</p><p>
+Stepping motors come in a wide range of angular resolution.  The
+coarsest motors typically turn 90 degrees per step, while high
+resolution permanent magnet motors are commonly able to handle 1.8
+or even 0.72 degrees per step.  With an appropriate controller,
+most permanent magnet and hybrid motors can be run in half-steps, and some
+controllers can handle smaller fractional steps or microsteps.
+</p><p>
+For both permanent magnet and variable reluctance stepping motors, if just
+one winding of the motor is energised, the rotor (under no load) will snap
+to a fixed angle and then hold that angle until the torque exceeds the
+holding torque of the motor, at which point, the rotor will turn, trying
+to hold at each successive equilibrium point.
+</p><p>
+</p><h2><a name="vrmotors">Variable Reluctance Motors</a></h2>
+<pre width="65"><b>Figure 1.1</b> <img align="middle" src="./Jones on Stepping Motor Types_files/1.gif" alt="
+           . . . . . . . .
+           1 ---/\/\/\-  .            1
+                       | . .      2   X   3
+           2 ---/\/\/\-|-- C        Y o Y
+                       |          3   X   2
+           3 ---/\/\/\-               1
+">
+</pre>
+If your motor has three windings, typically connected as shown in the schematic
+diagram in Figure 1.1, with one terminal common to all windings,
+it is most likely a
+variable reluctance stepping motor, sometimes known as a switched reluctance
+motor.  In use, the common wire typically goes
+to the positive supply and the windings are energized in sequence.
+<p>
+The cross section shown in Figure 1.1 is of 30 degree per step variable
+reluctance motor.  The rotor in this motor has 4 teeth and the stator has
+6 poles, with each winding wrapped around two opposite poles.  With winding
+number 1 energised, the rotor teeth marked X are attracted to this winding's
+poles.  If the current through winding 1 is turned off and winding 2 is turned
+on, the rotor will rotate 30 degrees clockwise so that the poles marked Y
+line up with the poles marked 2.  An
+<a href="http://homepage.cs.uiowa.edu/~jones/step/typesf/1anim.html">animated GIF of figure 1.1</a> is available.
+</p><p>
+To rotate this motor continuously, we just apply power to the 3 windings in
+sequence.  Assuming positive logic, where a 1 means turning on the current
+through a motor winding, the following control sequence will spin the motor
+illustrated in Figure 1.1 clockwise 24 steps or 2 revolutions:
+</p><pre>  Winding 1 1001001001001001001001001
+  Winding 2 0100100100100100100100100
+  Winding 3 0010010010010010010010010
+              time ---&gt;
+</pre>
+The section of this tutorial on
+<a href="http://homepage.cs.uiowa.edu/~jones/step/midlevel.html">Mid-Level Control</a>
+provides details on methods for generating such sequences of control signals,
+while the section on
+<a href="http://homepage.cs.uiowa.edu/~jones/step/circuits.html">Control Circuits</a>
+discusses the power switching circuitry needed to drive the motor windings
+from such control sequences.
+<p>
+There are also variable reluctance stepping motors with 4 and 5 windings,
+requiring 5 or 6 wires.  The principle for driving these motors is the
+same as that for the three winding variety, but it becomes important to
+work out the correct order to energise the windings to make the motor
+step nicely.
+</p><p>
+The motor geometry illustrated in Figure 1.1, giving 30 degrees per step,
+uses the fewest number of rotor teeth and stator poles that performs
+satisfactorily.  Using more motor poles and more rotor teeth allows
+construction of motors with smaller step angle.  Toothed faces on each
+pole and a correspondingly finely toothed rotor allows for step angles as
+small as a few degrees.
+</p><p>
+</p><h2><a name="unipolar">Unipolar Motors</a></h2>
+<pre width="65"><b>Figure 1.2</b> <img align="middle" src="./Jones on Stepping Motor Types_files/2.gif" alt="
+               . 1                1
+               . |                N
+          . . .  |                S
+          a---/\/ \/\---b      N     N
+                           2 X    o    X 2
+          a---\/\_/\/---b      S     S
+                 |                N
+                 |                S
+                 2                1
+">
+</pre>
+Unipolar stepping motors, both
+Permanent magnet and hybrid stepping motors with 5 or 6 wires are usually
+wired as shown in the schematic in Figure 1.2, with a center tap on each
+of two windings.  In use, the center taps of the windings are typically wired
+to the positive supply, and the two ends of each winding are alternately
+grounded to reverse the direction of the field provided by that winding.  An
+<a href="http://homepage.cs.uiowa.edu/~jones/step/typesf/2anim.html">animated GIF of figure 1.2</a> is available.
+<p>
+The motor cross section shown in Figure 1.2 is of a 30 degree per step
+permanent magnet or hybrid motor -- the difference between these two
+motor types is not relevant at this level of abstraction.  Motor winding
+number 1 is distributed between the top and bottom stator pole, while
+motor winding number 2 is distributed between the left and right motor
+poles.  The rotor is a permanent magnet with 6 poles, 3 south and 3 north,
+arranged around its circumfrence.
+</p><p>
+For higher angular resolutions, the rotor must have proportionally more
+poles.  The 30 degree per step motor in the figure is one of the most
+common permanent magnet motor designs, although 15 and 7.5 degree per step
+motors are widely available.  Permanent magnet motors with resolutions as
+good as 1.8 degrees per step are made, and hybrid motors are routinely
+built with 3.6 and 1.8 degrees per step, with resolutions as fine as
+0.72 degrees per step available.
+</p><p>
+As shown in the figure, the current flowing from the center tap of winding
+1 to terminal a causes the top stator pole to be a north pole while the
+bottom stator pole is a south pole.  This attracts the rotor into the
+position shown.  If the power to winding 1 is removed and winding 2 is
+energised, the rotor will turn 30 degrees, or one step.
+</p><p>
+To rotate the motor continuously, we just apply power to the two windings
+in sequence.  Assuming positive logic, where a 1 means turning on the
+current through a motor winding, the following two control sequences will spin
+the motor illustrated in Figure 1.2 clockwise 24 steps or 2 revolutions: 
+</p><pre>  Winding 1a 1000100010001000100010001
+  Winding 1b 0010001000100010001000100
+  Winding 2a 0100010001000100010001000
+  Winding 2b 0001000100010001000100010
+              time ---&gt;
+
+  Winding 1a 1100110011001100110011001
+  Winding 1b 0011001100110011001100110
+  Winding 2a 0110011001100110011001100
+  Winding 2b 1001100110011001100110011
+              time ---&gt;
+</pre>
+Note that the two halves of each winding are never energized at the same
+time.  Both sequences shown above will rotate a permanent magnet one
+step at a time.  The top sequence only powers one winding at a time, as
+illustrated in the figure above; thus, it uses less power.
+The bottom sequence involves powering two windings
+at a time and generally produces a torque about 1.4 times greater than
+the top sequence while using twice as much power.
+<p>
+The section of this tutorial on
+<a href="http://homepage.cs.uiowa.edu/~jones/step/midlevel.html">Mid-Level Control</a>
+provides details on methods for generating such sequences of control signals,
+while the section on
+<a href="http://homepage.cs.uiowa.edu/~jones/step/circuits.html">Control Circuits</a>
+discusses the power switching circuitry needed to drive the motor windings
+from such control sequences.
+</p><p>
+The step positions produced by the two sequences above are not the same; as a
+result, combining the two sequences allows half stepping, with the motor
+stopping alternately at the positions indicated by one or the other sequence.
+The combined sequence is as follows:
+</p><pre>  Winding 1a 11000001110000011100000111
+  Winding 1b 00011100000111000001110000
+  Winding 2a 01110000011100000111000001
+  Winding 2b 00000111000001110000011100
+              time ---&gt;
+</pre>
+<p>
+</p><h2><a name="bipolar">Bipolar Motors</a></h2>
+<pre width="65"><b>Figure 1.3</b> <img align="middle" src="./Jones on Stepping Motor Types_files/3.gif" alt="
+       1a ---/\/\/\--- 1b
+
+       2a ---/\/\/\--- 2b
+">
+</pre>
+Bipolar permanent magnet and hybrid motors are constructed with exactly
+the same mechanism as is used on unipolar motors, but the two windings
+are wired more simply, with no center taps.  Thus, the motor itself is
+simpler but the drive circuitry needed to reverse the polarity of each
+pair of motor poles is more complex.  The schematic in Figure 1.3 shows
+how such a motor is wired, while the motor cross section shown here
+is exactly the same as the cross section shown in Figure 1.2.
+<p>
+The drive circuitry for such a motor requires an <i>H-bridge</i> control
+circuit for each winding; these are discussed in more detail in the
+section on
+<a href="http://homepage.cs.uiowa.edu/~jones/step/circuits.html">Control Circuits.</a>
+Briefly, an H-bridge allows the polarity of the power applied to each
+end of each winding to be controlled independently.  The control sequences
+for single stepping such a motor are shown below, using + and - symbols to
+indicate the polarity of the power applied to each motor terminal:
+</p><pre>  Terminal 1a +---+---+---+---  ++--++--++--++--
+  Terminal 1b --+---+---+---+-  --++--++--++--++
+  Terminal 2a -+---+---+---+--  -++--++--++--++-
+  Terminal 2b ---+---+---+---+  +--++--++--++--+
+              time ---&gt;
+</pre>
+<p>
+Note that these sequences are identical to those for a unipolar permanent
+magnet motor, at an abstract level, and that above the level of the H-bridge
+power switching electronics, the control systems for the two types of motor
+can be identical.
+</p><p>
+Note that many full H-bridge driver chips have one control input to enable
+the output and another to control the direction.  Given two such bridge
+chips, one per winding, the following control sequences will spin the
+motor identically to the control sequences given above:
+</p><pre>  Enable    1 1010101010101010  1111111111111111
+  Direction 1 1x0x1x0x1x0x1x0x  1100110011001100
+  Enable    2 0101010101010101  1111111111111111
+  Direction 2 x1x0x1x0x1x0x1x0  0110011001100110
+              time ---&gt;
+</pre>
+To distinguish a bipolar permanent magnet motor from other 4 wire motors,
+measure the resistances between the different terminals.
+It is worth noting that some permanent magnet stepping motors
+have 4 independent windings, organized as two sets of two.  Within each
+set, if the two windings are wired in series, the result can be used
+as a high voltage bipolar motor.  If they are wired in parallel, the
+result can be used as a low voltage bipolar motor.  If they are wired
+in series with a center tap, the result can be used as a low voltage
+unipolar motor.
+
+<p>
+</p><h2><a name="bifilar">Bifilar Motors</a></h2>
+<p>
+Bifilar windings on a stepping motor are applied to the same rotor
+and stator geometry as a bipolar motor,
+but instead of winding each coil in the stator with a single wire,
+two wires are wound in parallel with each other.  As a result, the
+motor has 8 wires, not four.
+</p><p>
+In practice, motors with bifilar windings are always powered as either
+unipolar or bipolar motors.  Figure 1.4 shows the
+alternative connections to the windings of such a motor.
+
+</p><pre width="65"><b>Figure 1.4</b> <img align="middle" src="./Jones on Stepping Motor Types_files/4.gif" alt="
+">
+</pre>
+<p>
+To use a bifilar motor as a unipolar
+motor, the two wires of each winding are connected in series and the
+point of connection is used as a center-tap.  Winding 1 in Figure 1.4
+is shown connected this way.
+</p><p>
+To use a bifilar motor as a bipolar motor, the two wires of each winding
+are connected either in parallel or in series.
+Winding 2 in Figure 1.4 is shown with a parallel connection; this allows
+low voltage high-current operation.
+Winding 1 in Figure 1.4 is shown with a series connection; if the center
+tap is ignored, this allows operation at a higher voltage and lower
+current than would be used with the windings in parallel.
+</p><p>
+It should be noted that essentially all 6-wire motors sold for bipolar
+use are actually wound using bifilar windings, so that the external connection
+that serves as a center tap is actually connected as shown for winding 1
+in Figure 1.4.  Naturally, therefore, any unipolar motor may be used as
+a bipolar motor at twice the rated voltage and half the rated current as
+is given on the nameplate.
+</p><p>
+The question of the correct operating voltage for a bipolar motor run as
+a unipolar motor, or for a bifilar motor with the motor windings in series
+is not as trivial as it might first appear.  There are three issues:  The
+current carrying capacity of the wire, cooling the motor, and avoiding
+driving the motor's magnetic circuits into saturation.  Thermal considerations
+suggest that, if the windings are wired in series, the voltage should only
+be raised by the square root of 2.  The magnetic field in the motor depends
+on the number of ampere turns; when the two half-windings are run in series,
+the number of turns is doubled, but because a well-designed motor has magnetic
+circuits that are close to saturation when the motor is run at its rated
+voltage and current, increasing the number of ampere-turns does not make
+the field any stronger.  Therefore, when a motor is run with the two
+half-windings in series, the current should be halved in order to avoid
+saturation; or, in other words, the voltage across the motor winding should
+be the same as it was.
+</p><p>
+For those who salvage old motors, finding an 8-wire motor poses a
+challenge!  Which of the 8 wires is which?  It is not hard to figure
+this out using an ohm meter, an AC volt meter, and a low voltage AC
+source.  First, use the ohm meter to identify the motor leads that are
+connected to each other through the motor windings.
+Then, connect a low-voltage AC source to one of these windings.
+The AC voltage should be below the advertised operating
+voltage of the motor; voltages under 1 volt are recommended.  The geometry
+of the magnetic circuits of the motor guarantees that the two wires of a
+bifilar winding will be strongly coupled for AC signals, while there
+should be almost no coupling to the other two wires.  Therefore, probing
+with an AC volt meter should disclose which of the other three windings
+is paired to the winding under power.
+
+</p><p>
+</p><h2><a name="multiphase">Multiphase Motors</a></h2>
+<p>
+</p><pre width="65"><b>Figure 1.5</b> <img align="middle" src="./Jones on Stepping Motor Types_files/5.gif" alt="
+                 1
+                / \
+               |   |    
+          3----/---\----4
+           \_ /     \ _/       
+             \|     |/
+              /\_ _/\
+             /  _X_  \
+             |_/   \_|
+             5       2
+">
+</pre>
+A less common class of permanent magnet or hybrid stepping motor is wired with
+all windings of the motor in a cyclic series, with one tap between each
+pair of windings in the cycle, or with only one end of each motor winding
+exposed while the other ends of each winding are tied together to an
+inaccessible internal connection.  In the context of 3-phase motors, these
+configurations would be described as Delta and Y configurations, but they
+are also used with 5-phase motors, as illustrated in Figure 1.5.
+Some multiphase motors expose all ends of all motor windings, leaving it
+to the user to decide between the Delta and Y configurations, or alternatively,
+allowing each winding to be driven independently.
+<p>
+Control of either one of these multiphase motors in either the Delta or Y
+configuration requires 1/2 of an H-bridge for each motor terminal.  It is
+noteworthy that 5-phase motors have the potential of delivering more torque
+from a given package size because all or all but one of the motor windings
+are energised at every point in the drive cycle.  Some 5-phase motors have
+high resolutions on the order of 0.72 degrees per step (500 steps per
+revolution).
+</p><p>
+Many automotive alternators are built using a 3-phase hybrid geometry with
+either a permanent magnet rotor or an electromagnet rotor powered through
+a pair of slip-rings.  These have been successfully used as stepping motors in
+some heavy duty industrial applications; step angles of 10 degrees per
+step have been reported.
+</p><p>
+With a 5-phase motor, there are 10 steps per
+repeat in the stepping cycle, as shown below:
+</p><pre>  Terminal 1  +++-----+++++-----++
+  Terminal 2  --+++++-----+++++---
+  Terminal 3  +-----+++++-----++++
+  Terminal 4  +++++-----+++++-----
+  Terminal 5  ----+++++-----+++++-
+              time ---&gt;
+</pre>
+<p>
+With a 3-phase motor, there are 6 steps per
+repeat in the stepping cycle, as shown below:
+</p><pre>  Terminal 1  +++---+++---
+  Terminal 2  --+++---+++-
+  Terminal 3  +---+++---++
+              time ---&gt;
+</pre>
+<p>
+Here, as in the bipolar case, each terminal is shown as being either
+connected to the positive or negative bus of the motor power system.
+Note that, at each step, only one terminal changes polarity.  This change
+removes the power from one winding attached to that terminal (because
+both terminals of the winding in question are of the same polarity) and
+applies power to one winding that was previously idle.  Given the motor
+geometry suggested by Figure 1.5, this control sequence will drive the
+motor through two revolutions.
+</p><p>
+To distinguish a 5-phase motor from other motors with 5 leads, note that, if
+the resistance between two consecutive terminals of the 5-phase motor is R,
+the resistance between non-consecutive terminals will be 1.5R.
+</p><p>
+Note that some 5-phase motors have 5 separate motor windings, with a total
+of 10 leads.  These can be connected in the star configuration shown above,
+using 5 half-bridge driver circuits, or each winding can be driven by its
+own full-bridge.  While the theoretical component count of half-bridge
+drivers is lower, the availability of integrated full-bridge chips may make
+the latter approach preferable.
+</p><p>
+
+
+
+</p></body></html>

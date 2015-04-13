@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29 -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><title>Arduino Motor Shield (L298N) (SKU:DRI0009) - Robot Wiki</title>
+<meta name="generator" content="MediaWiki 1.22.1">
+<link rel="shortcut icon" href="http://www.dfrobot.com/wiki/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.dfrobot.com/wiki/opensearch_desc.php" title="Robot Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.dfrobot.com/wiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Robot Wiki Atom feed" href="http://www.dfrobot.com/wiki/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="stylesheet" href="http://www.dfrobot.com/wiki/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&only=styles&skin=vector&*">
+<style>
+.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: df_wiki-wk:resourceloader:filter:minify-css:7:4250852ed2349a0d4d0fc6509a3e7d4c */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.autoellipsis-matched,.highlight{font-weight:bold}
+/* cache key: df_wiki-wk:resourceloader:filter:minify-css:7:9780324491b653a3780e2d029bdc140c */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;-webkit-box-shadow:0 2px 5px 0 #ccc;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(http://www.dfrobot.com/wiki/resources/mediawiki.action/images/green-checkmark.png?2014-01-14T05:50:00Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: df_wiki-wk:resourceloader:filter:minify-css:7:74467c571146c0732ecdebb7e533861d */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{text-decoration:none;color:black}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}
+/* cache key: df_wiki-wk:resourceloader:filter:minify-css:7:52b1797f70c7e4094dfa4191101944e8 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: df_wiki-wk:resourceloader:filter:minify-css:7:85d8c963a4e14a09ddf17b28df9fca36 */</style>
+
+<script src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/load.php"></script><script src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/load(1).php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)","wgTitle":"Arduino Motor Shield (L298N) (SKU:DRI0009)","wgCurRevisionId":4685,"wgRevisionId":4685,"wgArticleId":97,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Product Manual","DRI Series","Motor Controllers","Shields"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)","wgIsProbablyEditable":false,"wgRestrictionEdit":["autoconfirmed"],"wgRestrictionMove":["autoconfirmed"]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,
+"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: df_wiki-wk:resourceloader:filter:minify-js:7:5a69c7e0fa6557851b6dea8a62efaffb */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script><script src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/load(2).php"></script>
+
+		<script type="text/javascript" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/shCore.js"></script>
+		<script type="text/javascript" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/shAutoloader.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/shCoreMinit.css">
+		<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--><script async="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/load(3).php"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Arduino_Motor_Shield_L298N_SKU_DRI0009 skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Arduino Motor Shield (L298N) (SKU:DRI0009)</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Robot Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#mw-navigation">navigation</a>, 					<a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#Diagram"><span class="tocnumber">2</span> <span class="toctext">Diagram</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#Pin_Allocation"><span class="tocnumber">3</span> <span class="toctext">Pin Allocation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#Sample_Code"><span class="tocnumber">4</span> <span class="toctext">Sample Code</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#PWM_Speed_Control"><span class="tocnumber">4.1</span> <span class="toctext">PWM Speed Control</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#PLL_Speed_Control"><span class="tocnumber">4.2</span> <span class="toctext">PLL Speed Control</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This motor shield allows Arduino to drive two channel DC motors. It uses a L298N chip which deliveries output current up to 2A each channel.  The speed control is achieved through conventional PWM which can be obtained from Arduino’s PWM output Pin 5 and 6. The enable/disable function of the motor control is signalled by Arduino Digital Pin 4 and 7.
+</p><p>The Motor shield can be powered directly from Arduino or from external power source. It is strongly encouraged to use external power supply to power the motor shield.
+</p>
+<ul>
+<li> Logic Control Voltage：5V (From Arduino)
+</li>
+<li> Motor Driven Voltage：4.8～35V  (From Arduino or External Power Source)
+</li>
+<li> Logic supply current Iss：≤36mA
+</li>
+<li> Motor Driven current Io：≤2A
+</li>
+<li> Maximum power consumption：25W（T=75℃）
+</li>
+<li> PWM、PLL Speed control mode
+</li>
+<li> Control signal level:
+</li>
+</ul>
+<dl>
+<dd><dl>
+<dd>High：2.3V≤Vin≤5V   
+</dd>
+<dd>Low：-0.3V≤Vin≤1.5V
+</dd>
+</dl>
+</dd>
+</dl>
+<h2><span class="mw-headline" id="Diagram">Diagram</span></h2>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:434px;"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield3.png" class="image"><img alt="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/Arduino_Shield3.png" width="432" height="377" class="thumbimage"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield3.png" class="internal" title="Enlarge"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/magnify-clip.png" width="15" height="11" alt=""></a></div>Motor Shield</div></div></div></div>
+<p><b>Control Mode Selection Jumpers:</b>
+The shield supports PWM and PLL(Phased Locked Loop) control Modes.  The PWM mode uses E1 and E2 to generate PWM signal. The PLL mode uses M1 and M2 to generate phase control signal.  
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:440px;"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield4.png" class="image"><img alt="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/Arduino_Shield4.png" width="438" height="231" class="thumbimage"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield4.png" class="internal" title="Enlarge"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/magnify-clip.png" width="15" height="11" alt=""></a></div>Control Mode Selection Jumpers</div></div></div></div>
+<p><b>Motor Terminal: </b>
+Two DC motors are connected to blue motor terminals. The male header behide the terminals are the same as the motor terminals.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:246px;"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield5.png" class="image"><img alt="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/Arduino_Shield5.png" width="244" height="231" class="thumbimage"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield5.png" class="internal" title="Enlarge"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/magnify-clip.png" width="15" height="11" alt=""></a></div>Motor terminal</div></div></div></div>
+<p><b>PWRIN：</b>
+The motors can be powered by external power supply when the motor current exceeds the limits provided from the Arduino.  The swith between external and Arduino power is implemented by two jumpers. 
+</p>
+<ul>
+<li> PWRIN: External Power
+</li>
+<li> VIN: Arduino Power
+</li>
+</ul>
+<dl>
+<dd><dl>
+<dd><dl>
+<dd><dl>
+<dd><div class="thumb tleft"><div class="thumbinner" style="width:302px;"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield6.png" class="image"><img alt="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/300px-Arduino_Shield6.png" width="300" height="252" class="thumbimage" srcset="/wiki/images/4/41/Arduino_Shield6.png 1.5x, /wiki/images/4/41/Arduino_Shield6.png 2x"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield6.png" class="internal" title="Enlarge"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/magnify-clip.png" width="15" height="11" alt=""></a></div>The motors are powered by external power supply</div></div></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield7.png" class="image"><img alt="" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/300px-Arduino_Shield7.png" width="300" height="245" class="thumbimage" srcset="/wiki/images/e/e5/Arduino_Shield7.png 1.5x, /wiki/images/e/e5/Arduino_Shield7.png 2x"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://www.dfrobot.com/wiki/index.php/File:Arduino_Shield7.png" class="internal" title="Enlarge"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/magnify-clip.png" width="15" height="11" alt=""></a></div>The motors are powered by Arduino power supply</div></div></div>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<i>NOTE: When the motor shield is powered by external power source, make sure the external power source  and  Arduino have the same GND. </i>
+</p><p><br>
+<b>Control Signal Truth Table：</b>
+</p>
+<table border="1" cellspacing="0" cellpadding="5" width="600px" align="center">
+<tbody><tr>
+<th>E1
+</th>
+<th>M1
+</th>
+<th>
+</th>
+<th>E2
+</th>
+<th>M2
+</th>
+<th>
+</th></tr>
+<tr>
+<td>L
+</td>
+<td>X
+</td>
+<td>Motor 1 Disabled
+</td>
+<td>L
+</td>
+<td>X
+</td>
+<td>Motor 2 Disabled
+</td></tr>
+<tr>
+<td>H
+</td>
+<td>H
+</td>
+<td>Motor 1 Backward
+</td>
+<td>H
+</td>
+<td>H
+</td>
+<td>Motor 2 Backward
+</td></tr>
+<tr>
+<td>PWM
+</td>
+<td>X
+</td>
+<td>PWM Speed control
+</td>
+<td>PWM
+</td>
+<td>X
+</td>
+<td>PWM Speed control
+</td></tr></tbody></table>
+<p><i>Note：H is High level&nbsp;;L is Low level&nbsp;;PWM is Pulse Width Modulation signal; X is any voltage level</i>
+</p>
+<h2><span class="mw-headline" id="Pin_Allocation">Pin Allocation</span></h2>
+<table border="1" cellspacing="0" align="center" cellpadding="5" width="400px">
+<caption> "PWM Mode"
+</caption>
+<tbody><tr>
+<th style="background:#7dc2f5">Pin
+</th>
+<th style="background:#7dc2f5">Function
+</th></tr>
+<tr>
+<td align="center">Digital 4
+</td>
+<td align="center">Motor 2 Direction control
+</td></tr>
+<tr>
+<td align="center">Digital 5
+</td>
+<td align="center">Motor 2 PWM control
+</td></tr>
+<tr>
+<td align="center">Digital 6
+</td>
+<td align="center">Motor 1 PWM control
+</td></tr>
+<tr>
+<td align="center">Digital 7
+</td>
+<td align="center">Motor 1 Direction control
+</td></tr></tbody></table>
+<p><br>
+</p>
+<table border="1" cellspacing="0" align="center" cellpadding="5" width="400px">
+<caption> "PLL Mode"
+</caption>
+<tbody><tr>
+<th style="background:#7dc2f5">Pin
+</th>
+<th style="background:#7dc2f5">Function
+</th></tr>
+<tr>
+<td align="center">Digital 4
+</td>
+<td align="center">Motor 2 Enable control
+</td></tr>
+<tr>
+<td align="center">Digital 5
+</td>
+<td align="center">Motor 2 Direction control
+</td></tr>
+<tr>
+<td align="center">Digital 6
+</td>
+<td align="center">Motor 1 Direction control
+</td></tr>
+<tr>
+<td align="center">Digital 7
+</td>
+<td align="center">Motor 1 Enable control
+</td></tr></tbody></table>
+<p><br>
+<a rel="nofollow" class="external text" href="http://www.shieldlist.org/dfrobot/2a-motor">Shield diagram</a>
+</p>
+<h2><span class="mw-headline" id="Sample_Code">Sample Code</span></h2>
+<h3><span class="mw-headline" id="PWM_Speed_Control">PWM Speed Control</span></h3>
+<div><div id="highlighter_310829" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp comments">//Arduino PWM Speed Control：</code></div><div class="line number2 index1 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">E1 = 5;&nbsp; </code></div><div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">M1 = 4; </code></div><div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">E2 = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number5 index4 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">M2 = 7;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">setup() </code></div><div class="line number8 index7 alt1"><code class="cpp plain">{ </code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">pinMode(M1, OUTPUT);&nbsp;&nbsp; </code></div><div class="line number10 index9 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">pinMode(M2, OUTPUT); </code></div><div class="line number11 index10 alt2"><code class="cpp plain">} </code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">loop() </code></div><div class="line number14 index13 alt1"><code class="cpp plain">{ </code></div><div class="line number15 index14 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">value;</code></div><div class="line number16 index15 alt1"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">(value = 0&nbsp;; value &lt;= 255; value+=5) </code></div><div class="line number17 index16 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">{ </code></div><div class="line number18 index17 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">digitalWrite(M1,HIGH);&nbsp;&nbsp; </code></div><div class="line number19 index18 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">digitalWrite(M2, HIGH);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number20 index19 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">analogWrite(E1, value);&nbsp;&nbsp; </code><code class="cpp comments">//PWM Speed Control</code></div><div class="line number21 index20 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">analogWrite(E2, value);&nbsp;&nbsp; </code><code class="cpp comments">//PWM Speed Control</code></div><div class="line number22 index21 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">delay(30); </code></div><div class="line number23 index22 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">}&nbsp; </code></div><div class="line number24 index23 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<h3><span class="mw-headline" id="PLL_Speed_Control">PLL Speed Control</span></h3>
+<div><div id="highlighter_737883" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp comments">//Arduino PLL Speed Control：</code></div><div class="line number2 index1 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">E1 = 4;&nbsp;&nbsp; </code></div><div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">M1 = 5;</code></div><div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">E2 = 7;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number5 index4 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">M2 = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number6 index5 alt1">&nbsp;</div><div class="line number7 index6 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">setup() </code></div><div class="line number8 index7 alt1"><code class="cpp plain">{ </code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">pinMode(M1, OUTPUT);&nbsp;&nbsp; </code></div><div class="line number10 index9 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">pinMode(M2, OUTPUT); </code></div><div class="line number11 index10 alt2"><code class="cpp plain">} </code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">loop() </code></div><div class="line number14 index13 alt1"><code class="cpp plain">{ </code></div><div class="line number15 index14 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">value;</code></div><div class="line number16 index15 alt1"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code><code class="cpp plain">(value = 0&nbsp;; value &lt;= 255; value+=5) </code></div><div class="line number17 index16 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">{ </code></div><div class="line number18 index17 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">digitalWrite(M1,HIGH);&nbsp;&nbsp; </code></div><div class="line number19 index18 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">digitalWrite(M2, HIGH);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number20 index19 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">analogWrite(E1, value);&nbsp;&nbsp; </code><code class="cpp comments">//PLL Speed Control</code></div><div class="line number21 index20 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">analogWrite(E2, value);&nbsp;&nbsp; </code><code class="cpp comments">//PLL Speed Control</code></div><div class="line number22 index21 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">delay(30); </code></div><div class="line number23 index22 alt2"><code class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">}&nbsp; </code></div><div class="line number24 index23 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p><br><br>
+<a href="http://www.dfrobot.com/wiki/index.php/File:Nextredirectltr.png" class="image"><img alt="Nextredirectltr.png" src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/Nextredirectltr.png" width="42" height="20"></a>Go Shopping <a rel="nofollow" class="external text" href="http://www.dfrobot.com/index.php?route=product/product&keyword=DRI0009&category_id=0&description=1&model=1&product_id=69">Arduino Motor Shield (L298N) (SKU:DRI0009)</a>
+</p><script type="text/javascript">SyntaxHighlighter.autoloader('cpp /wiki/extensions/SyntaxHighlighter/syntaxhighlighter/scripts/shBrushCpp.js'); SyntaxHighlighter.all();</script>
+<!-- 
+NewPP limit report
+Real time usage: 0.128 seconds
+Preprocessor visited node count: 34/1000000
+Preprocessor generated node count: 72/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key df_wiki-wk:pcache:idhash:97-0!*!*!!en!2!* and timestamp 20140519205027
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&oldid=4685">http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&amp;oldid=4685</a>"				</div>
+												<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://www.dfrobot.com/wiki/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="http://www.dfrobot.com/wiki/index.php/Category:Product_Manual" title="Category:Product Manual">Product Manual</a></li><li><a href="http://www.dfrobot.com/wiki/index.php/Category:DRI_Series" title="Category:DRI Series">DRI Series</a></li><li><a href="http://www.dfrobot.com/wiki/index.php/Category:Motor_Controllers" title="Category:Motor Controllers">Motor Controllers</a></li><li><a href="http://www.dfrobot.com/wiki/index.php/Category:Shields" title="Category:Shields">Shields</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-anonuserpage"><a href="http://www.dfrobot.com/wiki/index.php/User:95.63.194.20" class="new" title="The user page for the IP address you are editing as [alt-shift-.]" accesskey=".">95.63.194.20</a></li><li id="pt-anontalk"><a href="http://www.dfrobot.com/wiki/index.php/User_talk:95.63.194.20" class="new" title="Discussion about edits from this IP address [alt-shift-n]" accesskey="n">Talk for this IP address</a></li><li id="pt-anonlogin"><a href="http://www.dfrobot.com/wiki/index.php?title=Special:UserLogin&returnto=Arduino+Motor+Shield+%28L298N%29+%28SKU%3ADRI0009%29" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="http://www.dfrobot.com/wiki/index.php/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="http://www.dfrobot.com/wiki/index.php?title=Talk:Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&action=edit&redlink=1" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="http://www.dfrobot.com/wiki/index.php/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label" tabindex="0"><span>Actions</span><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#" tabindex="-1"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://www.dfrobot.com/wiki/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Robot Wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off">						<button type="submit" name="button" title="Search the pages for this text" id="searchButton"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/search-ltr.png" alt="Search" width="12" height="13"></button>								<input type="hidden" name="title" value="Special:Search">
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel" class="collapsible-nav">
+					<div id="p-logo" role="banner"><a style="background-image: url(/wiki/skins/common/images/wiki.png);" href="http://www.dfrobot.com/wiki/index.php/Main_Page" title="Visit the main page"></a></div>
+				<div class="portal first persistent" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label">Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://www.dfrobot.com/wiki/index.php/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main page</a></li>
+			<li id="n-Review"><a href="http://www.dfrobot.com/wiki/index.php/Review">Review</a></li>
+			<li id="n-Project"><a href="http://www.dfrobot.com/wiki/index.php/Project">Project</a></li>
+			<li id="n-Tutorial"><a href="http://www.dfrobot.com/wiki/index.php/Tutorial">Tutorial</a></li>
+			<li id="n-Assembly-Guide"><a href="http://www.dfrobot.com/wiki/index.php/Assembly_Guide">Assembly Guide</a></li>
+			<li id="n-Product-Manual"><a href="http://www.dfrobot.com/wiki/index.php/Product_Manual">Product Manual</a></li>
+			<li id="n-help"><a href="http://www.dfrobot.com/wiki/index.php/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal expanded" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" tabindex="2"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_%28L298N%29_%28SKU:DRI0009%29#">Tools</a></h3>
+	<div class="body" style="display: block;">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://www.dfrobot.com/wiki/index.php/Special:WhatLinksHere/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://www.dfrobot.com/wiki/index.php/Special:RecentChangesLinked/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="http://www.dfrobot.com/wiki/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&oldid=4685" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009)&action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 19 April 2012, at 12:30.</li>
+											<li id="footer-info-viewcount">This page has been accessed 101,064 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://www.dfrobot.com/wiki/index.php/Robot_Wiki:Privacy_policy" title="Robot Wiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://www.dfrobot.com/wiki/index.php/Robot_Wiki:About" title="Robot Wiki:About">About Robot Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://www.dfrobot.com/wiki/index.php/Robot_Wiki:General_disclaimer" title="Robot Wiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="./Arduino Motor Shield (L298N) (SKU DRI0009) - Robot Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.loader.state({"site":"ready"});
+}</script>
+<!-- Served in 0.436 secs. -->
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
