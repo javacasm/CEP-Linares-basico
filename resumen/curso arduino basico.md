@@ -119,17 +119,39 @@ Programa parpadeo
 #### Ejercicio: Cambiar al pin del esquema
 #### Ejercicio: Cambiar el pin utilizado al pin 2
 
-* * * 
-# Envío de datos serie
 
-### La comunicación serie se produce via USB entre Arduino y el PC
+* * *
+## Semáforo
 
-* Detectamos el puerto
-* Configuramos la velocidad
-* Necesitamos un programa para ver los datos
+2 leds (rojo y verde) se alternan
 
-## Vamos a enviar "Encendido" y "Apagado" al PC
-![ParpadeoSerie](imagenes/ParpadeoSerie.png)
+
+* LED Rojo encendido y Verde apagado
+* Esperamos
+* LED Rojo apagado y Verde encendido
+* Esperamos
+
+* * *
+## Semáforo con código
+
+	setup()
+	{ pinMode(ledverde,OUTPUT);
+	  pinMode(ledrojo,OUTPUT);
+	}
+
+	void loop()
+	{ int esperaVerde=1000;
+	  int esperaRojo=500;
+	  digitalWrite(ledverde,LOW);
+	  digitalWrite(ledrojo,HIGH);
+	  delay(esperaVerde);
+	  digitalWrite(ledrojo,LOW);
+	  digitalWrite(ledverde,HIGH);
+	  delay(esperaRojo);
+	} 
+
+
+* * *
 
 * * * 
 # Escritura de valores analógicos
@@ -148,7 +170,7 @@ Programa parpadeo
 	void setup()						// configuracion
 	{
 	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
-	  Serial.begin(9600);				// Configuramos la conexión con el PC
+	  
 	}
 
 	void loop()
@@ -156,7 +178,6 @@ Programa parpadeo
 	  int valorSalida=0;				// la variable valorSalida empieza en 0
 	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
 	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
-	    Serial.println(valorSalida);	// Enviamos al pc la variable
 	    delay(100);						// Esperamos 0,1 segundos
 	   }
 
@@ -217,6 +238,54 @@ Programa parpadeo
 	}
 
 ### Ejercicio: usar 3 potenciómetros para controlar los colores de un led RGB
+
+* * *
+
+# Envío de datos serie
+
+### La comunicación serie se produce via USB entre Arduino y el PC
+
+* Detectamos el puerto
+* Configuramos la velocidad
+* Necesitamos un programa para ver los datos
+
+## Vamos a enviar "Encendido" y "Apagado" al PC
+![ParpadeoSerie](imagenes/ParpadeoSerie.png)
+
+
+* * * 
+# Números decimales
+
+Usaremos el tipo de variable float
+
+### Ejemplo: Voltímetro
+* Leemos el valor de un potenciómetro conectado a una entrada analógica (A0)
+* Convertimos el valor (0-1023) a 0 - 5.0v
+* Sacamos el valor por la consola serie
+
+* Calibramos viendo los extremos y el valor intermedio 3.3V
+
+
+	const int analogInPin = A0;  // Entrada analógica
+	int sensorValue = 0;        // valor leído
+
+	void setup() {
+	  Serial.begin(9600); 
+	}
+	void loop() {
+	  
+	  sensorValue = analogRead(analogInPin);   // leemos el valor analógico
+	  float voltios=(5.0*sensorValue) /1023;   // Lo convertimos
+	  Serial.print("sensor = " );                       
+	  Serial.print(sensorValue);    
+	  Serial.print(" = ");
+	  Serial.print(voltios);
+	  Serial.println("v");   
+	   delay(200);                     
+	}
+
+
+
 
 * * * 
 # Sensores
