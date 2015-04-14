@@ -18,6 +18,6 @@
 
 [Materiales complementarios](./complementarios)
 
-[Componentes usados](./Pedido.html)
+[Componentes usados](./Pedido.md)
 
 [Especificaciones de los componentes](./componentes)
