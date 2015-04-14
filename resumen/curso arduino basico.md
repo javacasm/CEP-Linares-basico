@@ -1,5 +1,8 @@
 * * *
 
+auto-gen TOC:
+{:toc}
+
 # Curso básico de Arduino
 
 
@@ -132,6 +135,10 @@ Programa parpadeo
 * Esperamos
 
 * * *
+## Semáforo con bitbloq
+
+![semaBitbloq](./imagenes/SemaforoBitloq.png)
+* * *
 ## Semáforo con código
 
 	setup()
@@ -150,7 +157,9 @@ Programa parpadeo
 	  delay(esperaRojo);
 	} 
 
-
+* * *
+## Montaje semáforo
+![montajeSema](./imagenes/Semaforo.png)
 * * *
 
 * * * 
