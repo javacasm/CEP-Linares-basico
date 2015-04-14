@@ -9,6 +9,7 @@
 ![CCbySA](resumen/imagenes/CCbySQ_88x31.png)
 
 
+
 [Introducción a Arduino](./Introduccion Arduino.pdf)
 
 [Programando Arduino con Bitbloq](./resumen/curso arduino basico.md)
@@ -17,4 +18,6 @@
 
 [Materiales complementarios](./complementarios)
 
-[Componentes](./componentes)
+[Componentes usados](./Pedido.html)
+
+[Especificaciones de los componentes](./componentes)
