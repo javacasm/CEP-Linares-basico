@@ -476,6 +476,42 @@ Mostramos en el lcd la temperatura actual
 
 
 * * *
+### ¿Dónde comprar?
+
+Ante todo hay que mirar lo que se compra y la documentación e información que se incluye.
+
+# Españolas
+
+[Electan](http://www.electan.com/)
+
+[Cooking Hacks](http://www.cooking-hacks.com/)
+
+[Bricogeek](http://tienda.bricogeek.com/)
+
+[Bq](http://www.bq.com/es/productos/kit-robotica.html)
+
+***
+
+
+# Internacionales
+
+[Sparkfun](https://www.sparkfun.com/)
+
+[Adafruit](http://www.adafruit.com/)
+
+[SeedStudio](http://www.seeedstudio.com)
+
+# Internacionales baratas
+
+[Elecfreaks](http://www.elecfreaks.com/)
+
+[EletroDragon](http://www.electrodragon.com/)
+
+# Baratas (bazares)
+
+[DX](http://www.dx.com/s/arduino)
+
+* * *
 
 # Agradecimientos:
 
