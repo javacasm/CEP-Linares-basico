@@ -173,6 +173,16 @@ Usaremos una variable para que se vayan encendiendo por orden los leds
 
 ![montaje](./imagenes/KIT_CEPL.png)
 
+* * *
+# Variables globales
+
+Vamos a usar dos variables globales: mantienen su valor entre las interaciones
+
+* ContadorVueltas nos dirá el número de vueltas
+* Espera irá incrementando su valor
+
+![global](./imagenes/Globales.png)
+
 
 * * * 
 # Escritura de valores analógicos
