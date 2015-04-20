@@ -123,15 +123,18 @@ Programa parpadeo
 * * *
 ## Semáforo
 
-2 leds (rojo y verde) se alternan
+2 leds (rojo y verde) se alternan con un tiempo de espera entre ellos
+
+Como queremos que el código sea claro usaremos una variable para indicar el pin al que está conectado cada led.
 
 
 * LED Rojo encendido y Verde apagado
-* Esperamos
+* Esperamos un tiempo (tiempoRojo)
 * LED Rojo apagado y Verde encendido
-* Esperamos
+* Esperamos un tiempo (tiempoVerde)
 
 * * *
+
 ## Semáforo con bitbloq
 
 ![semaBitbloq](./imagenes/SemaforoBitloq.png)
@@ -161,6 +164,8 @@ Programa parpadeo
 
 # KIT (registro de desplazamiento)
 ## Vamos a encender varios leds de forma consecutiva
+
+Usaremos una variable para que se vayan encendiendo por orden los leds
 
 ![programa](./imagenes/KIT_bitbloq.png)
 
