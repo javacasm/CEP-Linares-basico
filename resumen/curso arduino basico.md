@@ -129,9 +129,9 @@ Como queremos que el código sea claro usaremos una variable para indicar el pin
 
 
 * LED Rojo encendido y Verde apagado
-* Esperamos un tiempo (tiempoRojo)
+* Esperamos un tiempo (EsperaEnRojo)
 * LED Rojo apagado y Verde encendido
-* Esperamos un tiempo (tiempoVerde)
+* Esperamos un tiempo (EsperaEnVerde)
 
 * * *
 
