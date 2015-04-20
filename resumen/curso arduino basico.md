@@ -163,9 +163,11 @@ Como queremos que el código sea claro usaremos una variable para indicar el pin
 * * *
 
 # KIT (registro de desplazamiento)
-## Vamos a encender varios leds de forma consecutiva
+#### Vamos a encender varios leds de forma consecutiva imitando el efecto que hacía Kit, el coche fantástico
 
-Usaremos una variable para que se vayan encendiendo por orden los leds
+![kit](http://www.gifmania.com/Gif-Animados-Series-Television/Imagenes-Series-Accion/Coche-Fantastico/Kitt-67595.gif)
+
+Usaremos una variable que nos irá diciendo el led que se ha de encender en cada paso.
 
 ![programa](./imagenes/KIT_bitbloq.png)
 
@@ -176,13 +178,23 @@ Usaremos una variable para que se vayan encendiendo por orden los leds
 * * *
 # Variables globales
 
-Vamos a usar dos variables globales: mantienen su valor entre las interaciones
+Vamos a usar variables globales. Su principal característica es que mantienen su valor en todo el programa y por tanto entre las distintas interaciones.
 
-* ContadorVueltas nos dirá el número de vueltas
-* Espera irá incrementando su valor
+* ContadorVueltas nos dirá el número de iteraciones que ha hecho nuestro programa
+* Espera irá incrementando su valor para hacer cada vez más lento el proceso
+
+Para modificar el valor usaremos el bloque de operaciones aritméticas que nos permite calcular el nuevo valor de la variable "espera"
 
 ![global](./imagenes/Globales.png)
 
+* * *
+## Números aleatorios
+
+Podemos generar valores aleaotrios con el bloque "Aleatorio" al que le diremos entre qué valores ha de generar los valores. El valor máximo no se alcanza, por lo que si queremos que se incluya tendremos que incrementar el máximo.
+
+Este programa llamado "Discotequero" hace parpadear los leds aleatoriamente durante un tiempo también aleatorio
+
+![alea](./imagenes/aleatorio.png)
 
 * * * 
 # Escritura de valores analógicos
