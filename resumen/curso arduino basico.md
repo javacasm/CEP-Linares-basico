@@ -1,8 +1,5 @@
 * * *
 
-auto-gen TOC:
-{:toc}
-
 # Curso básico de Arduino
 
 
@@ -161,6 +158,16 @@ Programa parpadeo
 ## Montaje semáforo
 ![montajeSema](./imagenes/Semaforo.png)
 * * *
+
+# KIT (registro de desplazamiento)
+## Vamos a encender varios leds de forma consecutiva
+
+![programa](./imagenes/KIT_bitbloq.png)
+
+### montaje
+
+![montaje](./imagenes/KIT_CEPL.png)
+
 
 * * * 
 # Escritura de valores analógicos
