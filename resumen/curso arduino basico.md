@@ -307,6 +307,8 @@ Una sentencia condicional es la que nos permite decidir si hacemos o no un bloqu
 
 ![circuitoPulsador](http://www.softweb.es/acuario/Esquemas/conexcion%20boya.jpg)
 
+![ejemplo](http://www.ikkaro.com/files/roobre/Arduino/Button.jpg)
+
 ## Programa
 
 ### Usamos una sentencia condicional: si se cumple esto...se hace aquello
