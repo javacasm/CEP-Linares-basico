@@ -260,6 +260,50 @@ Vamos a modificar el programa "Aleatorio" definiendo el valor de espera en el ra
 
 ![mapeotiempos](./imagenes/MapeoTiempos.png)
 
+* * *
+
+## Sentencias condicionales
+
+Una sentencia condicional es la que nos permite decidir si hacemos o no un bloque según una condición lógica
+
+![condicional](./imagenes/Condicional.png)
+
+* * *
+
+# Pulsaciones: botones
+
+## Montaje 
+
+![boton](imagenes/button.png)
+
+## Programa
+
+### Usamos una sentencia condicional: si se cumple esto...se hace aquello
+![boton](imagenes/Boton_Led.png)
+
+### Su código
+
+	void setup()
+	{
+	  pinMode(2,INPUT_PULLUP);  // Usamos 2 como entrada
+	  pinMode(13,OUTPUT);		// Usamos 13 como salida
+	}
+
+
+	void loop()
+	{
+	  if (digitalRead(2) == HIGH)  	// Si el pulsador está pulsado
+	  {
+	    digitalWrite(13,HIGH);		//Encendemos el led 13
+	  }
+	  else 							// Si NO se cumple
+	  {		
+	    digitalWrite(13,LOW);		// Lo apagamos
+	  }
+	}
+
+
+
 * * * 
 # Escritura de valores analógicos
 
@@ -424,40 +468,6 @@ Usaremos el tipo de variable float
 		float temperatura=(sensorValue*5*100)/1024; // float para tener decimales
 		Serial.println(temperatura);			// Enviamos el dato al PC
 		delay(1000);
-	}
-
-* * *
-
-# Pulsaciones: botones
-
-## Montaje 
-
-![boton](imagenes/button.png)
-
-## Programa
-
-### Usamos una sentencia condicional: si se cumple esto...se hace aquello
-![boton](imagenes/Boton_Led.png)
-
-### Su código
-
-	void setup()
-	{
-	  pinMode(2,INPUT_PULLUP);  // Usamos 2 como entrada
-	  pinMode(13,OUTPUT);		// Usamos 13 como salida
-	}
-
-
-	void loop()
-	{
-	  if (digitalRead(2) == HIGH)  	// Si el pulsador está pulsado
-	  {
-	    digitalWrite(13,HIGH);		//Encendemos el led 13
-	  }
-	  else 							// Si NO se cumple
-	  {		
-	    digitalWrite(13,LOW);		// Lo apagamos
-	  }
 	}
 
 
