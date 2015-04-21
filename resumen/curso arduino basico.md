@@ -303,7 +303,9 @@ Una sentencia condicional es la que nos permite decidir si hacemos o no un bloqu
 
 ## Montaje 
 
-![boton](imagenes/button.png)
+![boton](./imagenes/button.png)
+
+![circuitoPulsador](http://www.softweb.es/acuario/Esquemas/conexcion%20boya.jpg)
 
 ## Programa
 
