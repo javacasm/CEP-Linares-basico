@@ -262,6 +262,35 @@ Vamos a modificar el programa "Aleatorio" definiendo el valor de espera en el ra
 
 * * *
 
+## Voltímetro
+
+Vamos a modificar este programa para hacer un voltímetro.
+
+Para ello necesitamos usar números con decimales por lo que haremos el cambio en el entorno de Arduino
+
+	void setup()
+	{
+	  Serial.begin(9600);
+	}
+
+
+	void loop()
+	{
+	  int Led=random(8,14);
+	  int ValorPotenciometro=analogRead(A0);
+	  int Espera=map(ValorPotenciometro,0,1023,200,500);
+	  float Voltios=map(ValorPotenciometro,0,1023,0,5000)/1000.0;  // Es la línea anterior modificado
+	  pinMode(Led,OUTPUT);
+	  digitalWrite(Led,HIGH);
+	  delay(Espera);
+	  pinMode(Led,OUTPUT);
+	  digitalWrite(Led,LOW);
+	  Serial.print(Voltios);   // Enviamos el valor al PC
+	  Serial.println("v");
+	}
+
+* * *
+
 ## Sentencias condicionales
 
 Una sentencia condicional es la que nos permite decidir si hacemos o no un bloque según una condición lógica
