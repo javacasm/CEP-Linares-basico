@@ -230,6 +230,35 @@ Podemos generar valores aleaotrios con el bloque "Aleatorio" al que le diremos e
 Este programa llamado "Discotequero" hace parpadear los leds aleatoriamente durante un tiempo también aleatorio
 
 ![alea](./imagenes/aleatorio.png)
+* * *
+# Lectura de datos analógicos
+
+* ## Sensores (luz, temperatura)
+
+* ## Potenciómetro: resistencia variable (mando de volumen)
+
+### Se leen valores enteros entre 0 y 1023
+### Equivalen a los valores de 0V y 5V
+
+![pot](./imagenes/Pot.png)
+
+Cambiaremos nuestro programa "Aleatorio" para que el tiempo de espera con el led encendido sea proporcional al valor de espera del led encendido
+
+![aleacont](./imagenes/aleatorioControlado.png)
+
+* * *
+
+En muchas ocasiones necesitamos hacer la transformación al rango que a nosotros nos interesa. Para simplificarlo usamos las funciones matemáticas **map**
+
+![map](./imagenes/Mapeo.png)
+
+* La primera es una versión simplificada que nos convierte un valor de una entrada analógica (entre 0 y 1023) al rango 0-N que elijamos
+
+* La segunda nos permite hacer una transformación entre un rango y otro, cualquiera que sean los valores de estos.
+
+Vamos a modificar el programa "Aleatorio" definiendo el valor de espera en el rango que queramos
+
+![mapeotiempos](./imagenes/MapeoTiempos.png)
 
 * * * 
 # Escritura de valores analógicos
@@ -282,16 +311,6 @@ Este programa llamado "Discotequero" hace parpadear los leds aleatoriamente dura
 
 [Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica)
 
-* * *
-
-# Lectura de datos analógicos
-
-* ## Sensores (luz, temperatura)
-
-* ## Potenciómetro: resistencia variable (mando de volumen)
-
-### Se leen valores enteros entre 0 y 1023
-### Equivalen a los valores de 0V y 5V
 
 * * * 
 # Potenciómetro regulando una salida analógica
