@@ -334,7 +334,16 @@ Una sentencia condicional es la que nos permite decidir si hacemos o no un bloqu
 	  }
 	}
 
+* * *
+## 2 Pulsadores
 
+Vamos usar 2 pulsadores para mover el led que encenderemos: un pulsador hará que se encienda el led anterior, el otro hará que se encienda el siguiente.
+
+### Paso 1: 2 pulsadores encienden 2 leds
+
+Empezaremos haciendo un programa que controle 2 leds con 2 pulsadores: cada uno enciende un led
+
+![2leds](./imagenes/2Pulsador.png)
 
 * * * 
 # Escritura de valores analógicos
