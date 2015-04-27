@@ -339,6 +339,10 @@ Una sentencia condicional es la que nos permite decidir si hacemos o no un bloqu
 
 Vamos usar 2 pulsadores para mover el led que encenderemos: un pulsador hará que se encienda el led anterior, el otro hará que se encienda el siguiente.
 
+Para ello haremos el siguiente montaje con 6 leds (con resistencias de 330 Ohmios)y 2 pulsadores (con resistencias de 10k)
+
+![6leds+2Pulsdores](./imagenes/6leds+2Pulsadores.png)
+
 ### Paso 1: 2 pulsadores encienden 2 leds
 
 Empezaremos haciendo un programa que controle 2 leds con 2 pulsadores: cada uno enciende un led
