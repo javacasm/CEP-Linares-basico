@@ -350,6 +350,18 @@ Empezaremos haciendo un programa que controle 2 leds con 2 pulsadores: cada uno 
 ![2leds](./imagenes/2Pulsador.png)
 
 
+### Paso 2: 2 pulsadores que irán encendiendo el led siguiente o el anterior
+
+Utilizamos una variable que vamos incrementando con un pulsador y con otro decrementamos
+
+![kitManual](./imagenes/KitManual.png)
+
+(Hay que controlar que cuando lleguemos a un extremo no nos pasemos)
+
+Se añade un retardo para evitar que se detecten varias pulsaciones.
+
+
+
 * * *
 # Funciones
 
