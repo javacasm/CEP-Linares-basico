@@ -593,8 +593,8 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 	  int PosicionServo=map(valorPotenciometro,0,1023,0,180);	// Reescalamos el valor
 	  servo.write(valorPotenciometro);							// Le pedimos que gira hasta ese ángulo
 	  delay(50);												// Le damos tiempo para que complete el giro
-	}
-
+	
+}
 ## Oscilación servo
 
 Podemos utilizar un bucle para hacer que el servo oscile entre las posiciones extremas
