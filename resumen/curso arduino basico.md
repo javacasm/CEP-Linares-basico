@@ -355,6 +355,8 @@ Empezaremos haciendo un programa que controle 2 leds con 2 pulsadores: cada uno 
 
 Cuando tenemos un conjunto de instrucciones que se repiten a lo largo del código podemos hacer nuestro programa más simple creando una ** Función **
 
+![fnciones](./imagenes/funciones.png)
+
 ## Función: 
 
 	Conjunto de instrucciones que empaquetamos en un bloque y que podemos llamar desde cualquier parte de nuestro código. 
