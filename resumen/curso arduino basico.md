@@ -360,6 +360,7 @@ Utilizamos una variable que vamos incrementando con un pulsador y con otro decre
 
 Se añade un retardo para evitar que se detecten varias pulsaciones.
 
+Vemos que hay muchos bloque que se repiten, por lo que para facilitarlo definiremos funciones.
 
 
 * * *
