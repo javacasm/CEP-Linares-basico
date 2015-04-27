@@ -595,6 +595,12 @@ Ejemplo: [lcd](http://arduino.cc/en/pmwiki.php?n=Reference/LiquidCrystal) o [ser
 	  delay(50);												// Le damos tiempo para que complete el giro
 	}
 
+## Oscilación servo
+
+Podemos utilizar un bucle para hacer que el servo oscile entre las posiciones extremas
+
+![servo](./imagenes/OscilacionServo.png)
+
 #### [Más sobre servos](http://www.slideshare.net/javacasm/arduino-prctico-servos)
 
 * * *
