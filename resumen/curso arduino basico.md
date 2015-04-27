@@ -349,6 +349,27 @@ Empezaremos haciendo un programa que controle 2 leds con 2 pulsadores: cada uno 
 
 ![2leds](./imagenes/2Pulsador.png)
 
+
+* * *
+# Funciones
+
+Cuando tenemos un conjunto de instrucciones que se repiten a lo largo del código podemos hacer nuestro programa más simple creando una ** Función **
+
+## Función: 
+
+	Conjunto de instrucciones que empaquetamos en un bloque y que podemos llamar desde cualquier parte de nuestro código. 
+	
+	* Todas las funciones tienen 1 nombre que con el que se definen
+
+	* Una función puede devolver un valor a quien la llama o no
+
+	* A una función le podemos pasar un argumento, una variable que usará nuestra función para realizar su cometido
+
+
+
+Podemos llamar a una función desde cualquier parte de nuestro código.
+
+
 * * * 
 # Escritura de valores analógicos
 
