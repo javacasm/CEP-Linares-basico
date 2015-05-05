@@ -393,23 +393,23 @@ Podemos llamar a una función desde cualquier parte de nuestro código.
 
 ## Como vamos a hacer que cambie de valor usaremos una variable
 
-![dimmer](imagenes/dimmer-circuit3.png)
+![dimmer](imagenes/montajeLedAnalogico.png)
 
-![analogWrite](imagenes/AnalogWrite.png)
+![analogWrite](imagenes/ProgramaLedAnalogico.png)
 
 ### Si vemos el código
 
 	void setup()						// configuracion
 	{
-	  pinMode(9,OUTPUT);				// Usaremos la patilla 5 como salida
+	  pinMode(11,OUTPUT);				// Usaremos la patilla 5 como salida
 	  
 	}
 
 	void loop()
 	{
-	  int valorSalida=0;				// la variable valorSalida empieza en 0
-	  while (valorSalida < 256) {		// Haremos el bucle hasta que llegemos a 256
-	    analogWrite(9,valorSalida);		// pasamos el valor a la patilla 5
+	  int contador=0;				// la variable valorSalida empieza en 0
+	  while (contador <= 255) {		// Haremos el bucle hasta que lleguemos a 256
+	    analogWrite(11,contador);		// pasamos el valor a la patilla 11
 	    delay(100);						// Esperamos 0,1 segundos
 	   }
 
