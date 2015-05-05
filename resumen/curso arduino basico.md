@@ -366,7 +366,7 @@ Vemos que hay muchos bloque que se repiten, por lo que para facilitarlo definire
 * * *
 # Funciones
 
-Cuando tenemos un conjunto de instrucciones que se repiten a lo largo del código podemos hacer nuestro programa más simple creando una ** Función **
+Cuando tenemos un conjunto de instrucciones que se repiten a lo largo del código podemos hacer nuestro programa más simple creando una **Función**
 
 ![fnciones](./imagenes/funciones.png)
 
