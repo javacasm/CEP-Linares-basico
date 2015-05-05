@@ -417,9 +417,13 @@ Podemos llamar a una función desde cualquier parte de nuestro código.
 
 ## Vamos a hacer ahora una subida y luego la bajada
 
-![ledupdown](./imagenes/AnalogicoUpDown.png)
+![ledupdown](imagenes/AnalogicoUpDown.png)
 
 Es importante el dar un valor válido a la variable contador hasta de empezar a bajar
+
+Ejercicio:Añade una línea para que veas el valor desde el PC.
+
+Piensa en qué cambia si lo pones antes o después del incremento de la variable
 
 * * *
 # Led RGB
@@ -443,6 +447,13 @@ Es importante el dar un valor válido a la variable contador hasta de empezar a 
 [Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica)
 
 
+## Combinando colores
+
+Vamos a hacer combinaciones de colores.
+Es muy importante que seamos claros con los nombres de las variables para así no equivocarnos
+
+
+![colores](imagenes/Colores.png)
 * * * 
 # Potenciómetro regulando una salida analógica
 
