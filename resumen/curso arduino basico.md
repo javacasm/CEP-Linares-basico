@@ -372,13 +372,13 @@ Cuando tenemos un conjunto de instrucciones que se repiten a lo largo del códig
 
 ## Función: 
 
-	Conjunto de instrucciones que empaquetamos en un bloque y que podemos llamar desde cualquier parte de nuestro código. 
-	
-	* Todas las funciones tienen 1 nombre que con el que se definen
+Conjunto de instrucciones que empaquetamos en un bloque y que podemos llamar desde cualquier parte de nuestro código. 
 
-	* Una función puede devolver un valor a quien la llama o no
+* Todas las funciones tienen 1 nombre que con el que se definen
 
-	* A una función le podemos pasar un argumento, una variable que usará nuestra función para realizar su cometido
+* Una función puede devolver un valor a quien la llama o no
+
+* A una función le podemos pasar un argumento, una variable que usará nuestra función para realizar su cometido
 
 
 
