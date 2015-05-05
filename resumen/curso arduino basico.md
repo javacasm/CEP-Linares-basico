@@ -417,7 +417,7 @@ Podemos llamar a una función desde cualquier parte de nuestro código.
 
 ## Vamos a hacer ahora una subida y luego la bajada
 
-![ledupdown](./.imagenes/AnalogicoUpDown.png)
+![ledupdown](./imagenes/AnalogicoUpDown.png)
 
 Es importante el dar un valor válido a la variable contador hasta de empezar a bajar
 
