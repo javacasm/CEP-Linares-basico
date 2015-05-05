@@ -401,7 +401,7 @@ Podemos llamar a una función desde cualquier parte de nuestro código.
 
 	void setup()						// configuracion
 	{
-	  pinMode(11,OUTPUT);				// Usaremos la patilla 5 como salida
+	  pinMode(11,OUTPUT);				// Usaremos la patilla 11 como salida
 	  
 	}
 
