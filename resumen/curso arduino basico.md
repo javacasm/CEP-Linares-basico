@@ -450,6 +450,7 @@ Piensa en qué cambia si lo pones antes o después del incremento de la variable
 ## Combinando colores
 
 Vamos a hacer combinaciones de colores.
+Definiremos funciones con distintos colores y haremos una secuencia de colores. Cada función llamar
 Es muy importante que seamos claros con los nombres de las variables para así no equivocarnos
 
 
@@ -477,6 +478,14 @@ Es muy importante que seamos claros con los nombres de las variables para así n
 	}
 
 ### Ejercicio: usar 3 potenciómetros para controlar los colores de un led RGB
+
+El montaje sería:
+
+![3PotRGB](imagenes/3Pot-RGB.png)
+
+Y el programa
+
+![3PotRGB](imagenes/3Pot-RGB-prog.png)
 
 * * *
 
