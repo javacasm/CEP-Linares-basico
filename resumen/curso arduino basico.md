@@ -546,7 +546,9 @@ Vamos a controlar la velocidad y el sentido de giro con motores
 
 ![ControMarchaParoMotor](imagenes/ControMarchaParoMotor.png)
 
+Una versión más complicada donde añadimos unos indicadores de la dirección
 
+![ControlMotorIndicadores.png](imagenes/ControlMotorIndicadores.png)
 
 * * *
 
