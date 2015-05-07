@@ -489,6 +489,23 @@ Y el programa
 
 # Motores
 
+Para controlar motores vamos a usar una placa especializada en ello. En concreto usaremos una [placa estándar basada en el chip L298](http://www.dfrobot.com/wiki/index.php?title=Arduino_Motor_Shield_(L298N)_(SKU:DRI0009))
+
+Esta placa es capaz de controlar 2 motores.
+
+Comentar el tema de alimentación y la forma de controlarlo ** Alimentación **
+
+Esta placa, de tipo shield, se conecta encima de arduino y usa unos pines concretos:
+
+|Entrada|pin|Utilidad|
+|---|---|---|
+|M1|4| Sentido de giro del motor 1|
+|E1|5| Velocidad de giro del motor 1|
+|E2|6| Velocidad de giro del motor 2|
+|M2|7| Sentido de giro del motor 2|
+
+## Código
+
 	//Arduino PWM Speed Control：
 	int E1 = 5;  
 	int M1 = 4; 
