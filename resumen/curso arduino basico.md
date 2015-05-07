@@ -504,6 +504,12 @@ Esta placa, de tipo shield, se conecta encima de arduino y usa unos pines concre
 |E2|6| Velocidad de giro del motor 2|
 |M2|7| Sentido de giro del motor 2|
 
+## Programa
+
+Hacemos el siguiente programa bitbloq
+
+![ControlMotores](imagenes/ControlMotores.png)
+
 ## Código
 
 	//Arduino PWM Speed Control：
@@ -530,6 +536,16 @@ Esta placa, de tipo shield, se conecta encima de arduino y usa unos pines concre
 	    delay(30); 
 	  }  
 	}
+
+
+## Control de velocidad del motor
+
+Vamos a controlar la velocidad y el sentido de giro con motores
+
+(En el esquema no se ha puesto la placa L298 y se ha conectado directamente el motor a los pines de control 4 y 5)
+
+![ControMarchaParoMotor](imagenes/ControMarchaParoMotor.png)
+
 
 
 * * *
