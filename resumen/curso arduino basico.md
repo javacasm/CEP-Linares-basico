@@ -550,6 +550,10 @@ Una versión más complicada donde añadimos unos indicadores de la dirección
 
 ![ControlMotorIndicadores.png](imagenes/ControlMotorIndicadores.png)
 
+El programa sería 
+
+![ProgramaControlMotor](imagenes/ProgramaControlMotor.png)
+
 * * *
 
 # Envío de datos serie
