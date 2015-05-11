@@ -16,6 +16,8 @@
 
 [Introducción a la electrónica](./Introducción a la electrónica.pdf)
 
+[Sensores](./Sensores.pdf)
+
 [Materiales complementarios](./complementarios)
 
 [Componentes usados](./Pedido.pdf)
