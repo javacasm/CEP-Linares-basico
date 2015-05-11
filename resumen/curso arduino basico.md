@@ -643,6 +643,8 @@ Ejemplo: activaremos un led al pasar de determinado nivel de luz
 
 Ejemplo 2: Regular el nivel con un potenciometro.  Documentarlo.
 
+![LDRUmbralPot](imagenes/LDRUmbralPot.png)
+
 ***
 
 <!-- background: #184bc6-->
