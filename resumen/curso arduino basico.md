@@ -611,7 +611,9 @@ Usaremos el tipo de variable float
 * Conversiones: traducimos a valores físicos (aritmética/mapeo) según el fabricante
 * Calibraciones: establecemos valores de referencia
 
-[Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica) [Sensores](http://www.slideshare.net/javacasm/46-sensores)
+[Introducción a la electrónica](http://www.slideshare.net/javacasm/40-introduccin-a-la-electrnica) 
+
+[Sensores](http://www.slideshare.net/javacasm/46-sensores)
 
 
 
@@ -632,6 +634,8 @@ Estudiar el comportamiento con la luz
 
 Ejemplo: activaremos un led al pasar de determinado nivel de luz
 ![montaje LDR](http://s3rgiosan.com/workshop-arduino/sketches/sketch5b.png)
+
+
 Ejemplo 2: Regular el nivel con un potenciometro.  Documentarlo.
 
 ***
