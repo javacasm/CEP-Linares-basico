@@ -651,6 +651,10 @@ Vamos a añadir ahora un segundo LDR. Esto nos permitirá simular un seguidor so
 
 ![Seguidor solar](imagenes/seguidorSolar.png)
 
+El programa sería este:
+
+![ProgSegSolar](imagenes/ProgSeguidorSolar.png)
+
 ***
 
 <!-- background: #184bc6-->
