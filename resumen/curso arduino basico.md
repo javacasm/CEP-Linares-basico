@@ -640,7 +640,16 @@ Ejemplo 2: Regular el nivel con un potenciometro.  Documentarlo.
 <!-- color: #fff -->
 <!-- font: centurygothic -->
 # Termistor (sensor de temperatura)
-[Documentación del kit](http://www.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2#Thermistors)  [foros](http://www.seeedstudio.com/forum/viewtopic.php?f=16&t=2117&p=14846&hilit=thermistor#p14846)  [fabricante](http://www.seeedstudio.com/forum/download/file.php?id=1345)
+[Documentación del kit](http://www.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_Arduino_V2#Thermistors)  
+
+[foros](http://www.seeedstudio.com/forum/viewtopic.php?f=16&t=2117&p=14846&hilit=thermistor#p14846)  
+
+[fabricante](http://www.seeedstudio.com/forum/download/file.php?id=1345)
+
+[Ejemplo 1](http://playground.arduino.cc/ComponentLib/Thermistor)
+
+[Ejemplo 2](http://playground.arduino.cc/ComponentLib/Thermistor2)
+
 ![RTC](http://i56.tinypic.com/scx561.jpg)
 
 
