@@ -641,9 +641,15 @@ Ejemplo: activaremos un led al pasar de determinado nivel de luz
 
 ![ProgramaLDRUmbral](imagenes/ProgramaLDRUmbral.png)
 
-Ejemplo 2: Regular el nivel con un potenciometro.  Documentarlo.
+## Regular el nivel con un potenciometro.  Documentarlo.
 
 ![LDRUmbralPot](imagenes/LDRUmbralPot.png)
+
+## Seguidor solar
+
+Vamos a añadir ahora un segundo LDR. Esto nos permitirá simular un seguidor solar: compararemos los valores de los dos LDR, moviendo el servo en la dirección del que más luz recibe
+
+![Seguidor solar](imagenes/seguidorSolar.png)
 
 ***
 
