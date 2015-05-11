@@ -635,6 +635,10 @@ Estudiar el comportamiento con la luz
 Ejemplo: activaremos un led al pasar de determinado nivel de luz
 ![montaje LDR](http://s3rgiosan.com/workshop-arduino/sketches/sketch5b.png)
 
+## Activación de led por umbral de luz
+
+![ldrUmbral](imagenes/LDR-umbral.png)
+
 
 Ejemplo 2: Regular el nivel con un potenciometro.  Documentarlo.
 
